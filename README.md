@@ -33,8 +33,8 @@ src/
 
 1. Clone the repo:
    ```
-   git clone <your-repo-link>
-   cd <repo-folder>
+   git clone https://github.com/sadiaUsman-123/lab-test-booking-app.git
+   cd lab-test-booking-app
    ```
 2. Install dependencies:
    ```
@@ -56,6 +56,7 @@ src/
 
 - Search and filter on the test list
 - Cancel or edit a booking
+- A proper login and authentication system
 - A proper date picker and time slots
 - Unit tests for the validation logic
 - A retry button when loading fails
