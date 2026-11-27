@@ -1,56 +1,61 @@
-# Welcome to your Expo app 👋
+# Lab Test Booking App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A small mobile app built with React Native (Expo Router) where a patient can browse lab tests, book one, and see their bookings.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Test list with name, price and short description (loaded from a local JSON file)
+- Loading state while data loads, and an error message if loading fails
+- Test detail screen with a Book button
+- Booking form with validation:
+  - Name is required
+  - Phone number must be 11 digits
+  - Date cannot be in the past
+- My Bookings screen. Bookings are saved with AsyncStorage, so they stay after the app is closed and reopened
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- React Native with Expo and Expo Router
+- TypeScript
+- AsyncStorage for local storage
 
-   ```bash
-   npx expo start
-   ```
+## Project Structure
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+src/
+├── app/        # screens and navigation (test list, details, booking form, my bookings)
+├── services/   # testService.ts (loads the tests data)
+├── types/      # TypeScript types (test.ts)
+└── data/       # tests.json (local lab test data)
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+## How to Run
 
-### Other setup steps
+1. Clone the repo:
+   ```
+   git clone <your-repo-link>
+   cd <repo-folder>
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the app:
+   ```
+   npx expo start
+   ```
+4. Scan the QR code with the Expo Go app on your phone, or press `a` to open an Android emulator.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## Assumptions
 
-## Learn more
+- Phone number is checked only for length (exactly 11 digits).
+- Tests data is read from a local JSON file, not from an API.
+- The same test can be booked more than once.
 
-To learn more about developing your project with Expo, look at the following resources:
+## What I Would Add Next
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Search and filter on the test list
+- Cancel or edit a booking
+- A proper date picker and time slots
+- Unit tests for the validation logic
+- A retry button when loading fails
