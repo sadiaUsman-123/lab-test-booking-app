@@ -1,0 +1,54 @@
+
+[
+  {
+    "id": "1",
+    "name": "Complete Blood Count (CBC)",
+    "description": "Measures red blood cells, white blood cells and platelets.",
+    "price": 800
+  },
+  {
+    "id": "2",
+    "name": "Blood Glucose Test",
+    "description": "Measures the level of glucose in your blood.",
+    "price": 350
+  },
+  {
+    "id": "3",
+    "name": "Lipid Profile",
+    "description": "Checks cholesterol and triglyceride levels.",
+    "price": 1500
+  },
+  {
+    "id": "4",
+    "name": "Liver Function Test",
+    "description": "Evaluates liver health and function.",
+    "price": 1200
+  },
+  {
+    "id": "5",
+    "name": "Renal Function Test",
+    "description": "Checks kidney function through blood markers.",
+    "price": 1000
+   
+  },
+  {
+    "id": "6",
+    "name": "HbA1c Test",
+    "description": "Measures average blood sugar over recent months.",
+    "price": 1200
+  },
+  {
+    "id": "7",
+    "name": "Thyroid Profile",
+    "description": "Checks thyroid hormone levels.",
+    "price": 1800
+    
+  },
+  {
+    "id": "8",
+    "name": "Vitamin D Test",
+    "description": "Measures vitamin D levels in your blood.",
+    "price": 2500
+  
+  }
+]
